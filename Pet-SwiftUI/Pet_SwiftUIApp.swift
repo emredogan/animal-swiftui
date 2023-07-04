@@ -9,7 +9,7 @@ import SwiftUI
 import UserNotifications
 
 class MyAppDelegate: NSObject, UIApplicationDelegate, ObservableObject {
-	
+	var app: Pet_SwiftUIApp?
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
 		UNUserNotificationCenter.current().delegate = self
 		return true
@@ -20,23 +20,32 @@ extension MyAppDelegate: UNUserNotificationCenterDelegate {
 	func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse) async {
 		if let deepLink = response.notification.request.content.userInfo["link"] as? String {
 			print("Received deeplink ❤️ \(deepLink)")
+			let url = URL(string: deepLink)
+			Task {
+				if url?.host() == "german" {
+					app?.showPromo = true
+				}
+			}
 		}
+		
+	}
+	
+	func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification) async -> UNNotificationPresentationOptions {
+		return [.sound, .badge, .banner, .list]
 	}
 }
+	
 
 @main
 struct Pet_SwiftUIApp: App {
 	@UIApplicationDelegateAdaptor private var appDelegate: MyAppDelegate
-	@State private var showPromo = false
+	@State var showPromo = false
 
     var body: some Scene {
         WindowGroup {
             ContentView()
-				.onOpenURL { url in
-					print(url)
-					if url.host() == "german" {
-						showPromo = true
-					}
+				.task {
+					appDelegate.app = self
 				}
 				.sheet(isPresented: $showPromo) {
 					// Content of the sheet
