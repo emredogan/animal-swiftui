@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6305A87F2A50B33E006BCD1D /* Artwork_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6305A87E2A50B33E006BCD1D /* Artwork_SwiftUIApp.swift */; };
+		6305A87F2A50B33E006BCD1D /* Pet_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6305A87E2A50B33E006BCD1D /* Pet_SwiftUIApp.swift */; };
 		6305A8812A50B33E006BCD1D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6305A8802A50B33E006BCD1D /* ContentView.swift */; };
 		6305A8832A50B33F006BCD1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6305A8822A50B33F006BCD1D /* Assets.xcassets */; };
 		6305A8862A50B33F006BCD1D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6305A8852A50B33F006BCD1D /* Preview Assets.xcassets */; };
@@ -21,11 +21,12 @@
 		6305A8A02A5188F8006BCD1D /* DogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6305A89F2A5188F8006BCD1D /* DogView.swift */; };
 		6305A8A22A5189C7006BCD1D /* DogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6305A8A12A5189C7006BCD1D /* DogViewModel.swift */; };
 		6346D8B52A5384DE00DFBBD5 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 6346D8B42A5384DE00DFBBD5 /* SDWebImageSwiftUI */; };
+		6346D8F52A54442E00DFBBD5 /* NotificationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6346D8F42A54442E00DFBBD5 /* NotificationsManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6305A87B2A50B33E006BCD1D /* Artwork-SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Artwork-SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6305A87E2A50B33E006BCD1D /* Artwork_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artwork_SwiftUIApp.swift; sourceTree = "<group>"; };
+		6305A87E2A50B33E006BCD1D /* Pet_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pet_SwiftUIApp.swift; sourceTree = "<group>"; };
 		6305A8802A50B33E006BCD1D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6305A8822A50B33F006BCD1D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6305A8852A50B33F006BCD1D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -38,6 +39,8 @@
 		6305A89D2A517B40006BCD1D /* DogListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogListViewModel.swift; sourceTree = "<group>"; };
 		6305A89F2A5188F8006BCD1D /* DogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogView.swift; sourceTree = "<group>"; };
 		6305A8A12A5189C7006BCD1D /* DogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogViewModel.swift; sourceTree = "<group>"; };
+		6346D8F42A54442E00DFBBD5 /* NotificationsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsManager.swift; sourceTree = "<group>"; };
+		6346D8F62A54548E00DFBBD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +58,7 @@
 		6305A8722A50B33E006BCD1D = {
 			isa = PBXGroup;
 			children = (
-				6305A87D2A50B33E006BCD1D /* Artwork-SwiftUI */,
+				6305A87D2A50B33E006BCD1D /* Pet-SwiftUI */,
 				6305A87C2A50B33E006BCD1D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -68,17 +71,19 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		6305A87D2A50B33E006BCD1D /* Artwork-SwiftUI */ = {
+		6305A87D2A50B33E006BCD1D /* Pet-SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				6305A87E2A50B33E006BCD1D /* Artwork_SwiftUIApp.swift */,
+				6346D8F62A54548E00DFBBD5 /* Info.plist */,
+				6305A87E2A50B33E006BCD1D /* Pet_SwiftUIApp.swift */,
 				6305A88E2A50B3CB006BCD1D /* View */,
 				6305A88D2A50B3C2006BCD1D /* Model */,
 				6305A88C2A50B3B9006BCD1D /* ViewModel */,
+				6346D8F22A5443EB00DFBBD5 /* Services */,
 				6305A8822A50B33F006BCD1D /* Assets.xcassets */,
 				6305A8842A50B33F006BCD1D /* Preview Content */,
 			);
-			path = "Artwork-SwiftUI";
+			path = "Pet-SwiftUI";
 			sourceTree = "<group>";
 		};
 		6305A8842A50B33F006BCD1D /* Preview Content */ = {
@@ -118,6 +123,14 @@
 				6305A8952A50BCE5006BCD1D /* ArtworkDetailView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		6346D8F22A5443EB00DFBBD5 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				6346D8F42A54442E00DFBBD5 /* NotificationsManager.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,12 +211,13 @@
 			files = (
 				6305A8982A516AE2006BCD1D /* Unsplash.swift in Sources */,
 				6305A8812A50B33E006BCD1D /* ContentView.swift in Sources */,
+				6346D8F52A54442E00DFBBD5 /* NotificationsManager.swift in Sources */,
 				6305A8942A50BC40006BCD1D /* ArtworkView.swift in Sources */,
 				6305A8A22A5189C7006BCD1D /* DogViewModel.swift in Sources */,
 				6305A8902A50B402006BCD1D /* Artwork.swift in Sources */,
 				6305A89A2A516DF1006BCD1D /* UnsplashViewModel.swift in Sources */,
 				6305A89C2A5178D9006BCD1D /* Dog.swift in Sources */,
-				6305A87F2A50B33E006BCD1D /* Artwork_SwiftUIApp.swift in Sources */,
+				6305A87F2A50B33E006BCD1D /* Pet_SwiftUIApp.swift in Sources */,
 				6305A89E2A517B40006BCD1D /* DogListViewModel.swift in Sources */,
 				6305A8962A50BCE5006BCD1D /* ArtworkDetailView.swift in Sources */,
 				6305A8A02A5188F8006BCD1D /* DogView.swift in Sources */,
@@ -338,6 +352,7 @@
 				DEVELOPMENT_TEAM = F2CKUUZAW7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Artwork-SwiftUI/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -348,7 +363,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "edo.Artwork-SwiftUI";
+				PRODUCT_BUNDLE_IDENTIFIER = "edo.petSell-SwiftUI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -367,6 +382,7 @@
 				DEVELOPMENT_TEAM = F2CKUUZAW7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Artwork-SwiftUI/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -377,7 +393,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "edo.Artwork-SwiftUI";
+				PRODUCT_BUNDLE_IDENTIFIER = "edo.petSell-SwiftUI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
