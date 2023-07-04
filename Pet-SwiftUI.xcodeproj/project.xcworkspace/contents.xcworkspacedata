@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:">
+      location = "self:/Users/emredogan/Desktop/test_apps/Artwork-SwiftUI/Pet-SwiftUI.xcodeproj">
    </FileRef>
 </Workspace>

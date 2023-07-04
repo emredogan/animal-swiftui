@@ -171,7 +171,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 6305A8762A50B33E006BCD1D /* Build configuration list for PBXProject "Artwork-SwiftUI" */;
+			buildConfigurationList = 6305A8762A50B33E006BCD1D /* Build configuration list for PBXProject "Pet-SwiftUI" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -404,7 +404,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6305A8762A50B33E006BCD1D /* Build configuration list for PBXProject "Artwork-SwiftUI" */ = {
+		6305A8762A50B33E006BCD1D /* Build configuration list for PBXProject "Pet-SwiftUI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6305A8872A50B33F006BCD1D /* Debug */,
