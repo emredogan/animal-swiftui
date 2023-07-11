@@ -20,12 +20,15 @@
 		6305A89E2A517B40006BCD1D /* DogListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6305A89D2A517B40006BCD1D /* DogListViewModel.swift */; };
 		6305A8A02A5188F8006BCD1D /* DogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6305A89F2A5188F8006BCD1D /* DogView.swift */; };
 		6305A8A22A5189C7006BCD1D /* DogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6305A8A12A5189C7006BCD1D /* DogViewModel.swift */; };
+		630A2E1E2A57800B00504E96 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 630A2E1D2A57800B00504E96 /* GoogleService-Info.plist */; };
+		630A2E212A5783F000504E96 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 630A2E202A5783F000504E96 /* FirebaseMessaging */; };
+		63133F7A2A54DC6B00D116E4 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 63133F792A54DC6B00D116E4 /* FirebaseAnalytics */; };
 		6346D8B52A5384DE00DFBBD5 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 6346D8B42A5384DE00DFBBD5 /* SDWebImageSwiftUI */; };
 		6346D8F52A54442E00DFBBD5 /* NotificationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6346D8F42A54442E00DFBBD5 /* NotificationsManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		6305A87B2A50B33E006BCD1D /* Artwork-SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Artwork-SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6305A87B2A50B33E006BCD1D /* Pet-SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pet-SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6305A87E2A50B33E006BCD1D /* Pet_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pet_SwiftUIApp.swift; sourceTree = "<group>"; };
 		6305A8802A50B33E006BCD1D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6305A8822A50B33F006BCD1D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -39,6 +42,8 @@
 		6305A89D2A517B40006BCD1D /* DogListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogListViewModel.swift; sourceTree = "<group>"; };
 		6305A89F2A5188F8006BCD1D /* DogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogView.swift; sourceTree = "<group>"; };
 		6305A8A12A5189C7006BCD1D /* DogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogViewModel.swift; sourceTree = "<group>"; };
+		630A2E1C2A577EB400504E96 /* Pet-SwiftUI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Pet-SwiftUI.entitlements"; sourceTree = "<group>"; };
+		630A2E1D2A57800B00504E96 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6346D8F42A54442E00DFBBD5 /* NotificationsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsManager.swift; sourceTree = "<group>"; };
 		6346D8F62A54548E00DFBBD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -48,6 +53,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				630A2E212A5783F000504E96 /* FirebaseMessaging in Frameworks */,
+				63133F7A2A54DC6B00D116E4 /* FirebaseAnalytics in Frameworks */,
 				6346D8B52A5384DE00DFBBD5 /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -60,13 +67,14 @@
 			children = (
 				6305A87D2A50B33E006BCD1D /* Pet-SwiftUI */,
 				6305A87C2A50B33E006BCD1D /* Products */,
+				630A2E1F2A5783F000504E96 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		6305A87C2A50B33E006BCD1D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6305A87B2A50B33E006BCD1D /* Artwork-SwiftUI.app */,
+				6305A87B2A50B33E006BCD1D /* Pet-SwiftUI.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -74,6 +82,8 @@
 		6305A87D2A50B33E006BCD1D /* Pet-SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				630A2E1C2A577EB400504E96 /* Pet-SwiftUI.entitlements */,
+				630A2E1D2A57800B00504E96 /* GoogleService-Info.plist */,
 				6346D8F62A54548E00DFBBD5 /* Info.plist */,
 				6305A87E2A50B33E006BCD1D /* Pet_SwiftUIApp.swift */,
 				6305A88E2A50B3CB006BCD1D /* View */,
@@ -125,6 +135,13 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		630A2E1F2A5783F000504E96 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		6346D8F22A5443EB00DFBBD5 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -136,9 +153,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6305A87A2A50B33E006BCD1D /* Artwork-SwiftUI */ = {
+		6305A87A2A50B33E006BCD1D /* Pet-SwiftUI */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6305A8892A50B33F006BCD1D /* Build configuration list for PBXNativeTarget "Artwork-SwiftUI" */;
+			buildConfigurationList = 6305A8892A50B33F006BCD1D /* Build configuration list for PBXNativeTarget "Pet-SwiftUI" */;
 			buildPhases = (
 				6305A8772A50B33E006BCD1D /* Sources */,
 				6305A8782A50B33E006BCD1D /* Frameworks */,
@@ -148,12 +165,14 @@
 			);
 			dependencies = (
 			);
-			name = "Artwork-SwiftUI";
+			name = "Pet-SwiftUI";
 			packageProductDependencies = (
 				6346D8B42A5384DE00DFBBD5 /* SDWebImageSwiftUI */,
+				63133F792A54DC6B00D116E4 /* FirebaseAnalytics */,
+				630A2E202A5783F000504E96 /* FirebaseMessaging */,
 			);
 			productName = "Artwork-SwiftUI";
-			productReference = 6305A87B2A50B33E006BCD1D /* Artwork-SwiftUI.app */;
+			productReference = 6305A87B2A50B33E006BCD1D /* Pet-SwiftUI.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -182,12 +201,13 @@
 			mainGroup = 6305A8722A50B33E006BCD1D;
 			packageReferences = (
 				6346D8B32A5384DE00DFBBD5 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				63133F782A54DC6B00D116E4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 6305A87C2A50B33E006BCD1D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6305A87A2A50B33E006BCD1D /* Artwork-SwiftUI */,
+				6305A87A2A50B33E006BCD1D /* Pet-SwiftUI */,
 			);
 		};
 /* End PBXProject section */
@@ -199,6 +219,7 @@
 			files = (
 				6305A8862A50B33F006BCD1D /* Preview Assets.xcassets in Resources */,
 				6305A8832A50B33F006BCD1D /* Assets.xcassets in Resources */,
+				630A2E1E2A57800B00504E96 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,10 +367,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Pet-SwiftUI/Pet-SwiftUI.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Pet-SwiftUI/Preview Content\"";
-				DEVELOPMENT_TEAM = F2CKUUZAW7;
+				DEVELOPMENT_TEAM = BH7ATPEKS6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Pet-SwiftUI/Info.plist";
@@ -359,13 +382,15 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "edo.petSell-SwiftUI";
+				PRODUCT_BUNDLE_IDENTIFIER = "edo.dog-SwiftUI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -377,10 +402,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Pet-SwiftUI/Pet-SwiftUI.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Pet-SwiftUI/Preview Content\"";
-				DEVELOPMENT_TEAM = F2CKUUZAW7;
+				DEVELOPMENT_TEAM = BH7ATPEKS6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Pet-SwiftUI/Info.plist";
@@ -390,13 +417,15 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "edo.petSell-SwiftUI";
+				PRODUCT_BUNDLE_IDENTIFIER = "edo.dog-SwiftUI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -415,7 +444,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6305A8892A50B33F006BCD1D /* Build configuration list for PBXNativeTarget "Artwork-SwiftUI" */ = {
+		6305A8892A50B33F006BCD1D /* Build configuration list for PBXNativeTarget "Pet-SwiftUI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6305A88A2A50B33F006BCD1D /* Debug */,
@@ -427,6 +456,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		63133F782A54DC6B00D116E4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
 		6346D8B32A5384DE00DFBBD5 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
@@ -438,6 +475,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		630A2E202A5783F000504E96 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 63133F782A54DC6B00D116E4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+		63133F792A54DC6B00D116E4 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 63133F782A54DC6B00D116E4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
 		6346D8B42A5384DE00DFBBD5 /* SDWebImageSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 6346D8B32A5384DE00DFBBD5 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;

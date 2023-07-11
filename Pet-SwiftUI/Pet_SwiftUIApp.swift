@@ -6,14 +6,36 @@
 //
 
 import SwiftUI
-import UserNotifications
+import FirebaseCore
+import FirebaseMessaging
 
 class MyAppDelegate: NSObject, UIApplicationDelegate, ObservableObject {
 	var app: Pet_SwiftUIApp?
-	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+	func application(
+		_ application: UIApplication,
+		didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil
+	) -> Bool {
+
+		FirebaseApp.configure()
+		Messaging.messaging().delegate = self
+
+		
+		// Push notifications
 		UNUserNotificationCenter.current().delegate = self
+
+		let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
+		UNUserNotificationCenter.current().requestAuthorization(
+		  options: authOptions,
+		  completionHandler: { _, _ in }
+		)
+
+		application.registerForRemoteNotifications()
 		return true
 	}
+	
+	func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+			Messaging.messaging().setAPNSToken(deviceToken, type: .unknown)
+		}
 }
 
 extension MyAppDelegate: UNUserNotificationCenterDelegate {
@@ -30,8 +52,25 @@ extension MyAppDelegate: UNUserNotificationCenterDelegate {
 		
 	}
 	
+	
+	
 	func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification) async -> UNNotificationPresentationOptions {
 		return [.sound, .badge, .banner, .list]
+	}
+}
+
+extension MyAppDelegate: MessagingDelegate {
+	func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String?) {
+	  print("Firebase registration token: \(String(describing: fcmToken))")
+
+	  let dataDict: [String: String] = ["token": fcmToken ?? ""]
+	  NotificationCenter.default.post(
+		name: Notification.Name("FCMToken"),
+		object: nil,
+		userInfo: dataDict
+	  )
+	  // TODO: If necessary send token to application server.
+	  // Note: This callback is fired at each app startup and whenever a new token is generated.
 	}
 }
 	
