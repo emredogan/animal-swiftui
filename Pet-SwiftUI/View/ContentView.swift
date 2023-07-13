@@ -14,7 +14,7 @@ struct ContentView: View {
 		NavigationStack {
 			VStack {
 				Text("Number of dogs: \(viewModel.chosenDogUrls.count)")
-				List(viewModel.dogItems, id: \.id) { dogItem in
+				List(viewModel.dogItems, id: \.self) { dogItem in
 					DogView(dogBreed: dogItem)
 						.frame(width: UIScreen.main.bounds.width, height: 200)
 				}
