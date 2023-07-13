@@ -10,11 +10,14 @@ import SwiftUI
 struct ContentView: View {
 	@StateObject private var viewModel = DogListViewModel()
 	@StateObject private var notifManager = NotificationsManager()
-    var body: some View {
+	var body: some View {
 		NavigationStack {
-			List(viewModel.dogItems, id: \.self) { dogItem in
-				DogView(dogBreed: dogItem)
-					.frame(width: UIScreen.main.bounds.width, height: 200) // Set the desired width and height for the DogView
+			VStack {
+				Text("Number of dogs: \(viewModel.chosenDogUrls.count)")
+				List(viewModel.dogItems, id: \.id) { dogItem in
+					DogView(dogBreed: dogItem)
+						.frame(width: UIScreen.main.bounds.width, height: 200)
+				}
 			}
 			.toolbar {
 				Button("Request") {
@@ -23,19 +26,22 @@ struct ContentView: View {
 					}
 				}
 				.disabled(notifManager.hasPermission)
+				.accessibilityHidden(true)
 			}
 			.task {
 				await notifManager.getAuthStatus()
 				if viewModel.dogItems.isEmpty {
 					await viewModel.fetchDogBreedsListWithAsyncAwait()
 				}
+			}
+			.navigationTitle("Number of dogs: \(viewModel.chosenDogUrls.count)")
 		}
-		}
-    }
+		.environmentObject(viewModel)
+	}
 }
 
 struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
+	static var previews: some View {
+		ContentView()
+	}
 }

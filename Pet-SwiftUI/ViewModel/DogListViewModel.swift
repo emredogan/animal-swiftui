@@ -11,6 +11,7 @@ import Combine
 class DogListViewModel: ObservableObject {
 	/// Private so our views can not change it.
 	@Published private(set) var  dogItems = [DogBreed]()
+	@Published var  chosenDogUrls = [String]()
 	@Published private(set) var  isRefreshing = false
 	private var cancellables = Set<AnyCancellable>()
 	private let jsonDecoder = JSONDecoder()
