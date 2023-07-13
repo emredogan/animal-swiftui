@@ -19,21 +19,14 @@ struct DogView: View {
 				HStack {
 					ForEach(viewModel.dogImagesUrls, id: \.self) {urlString in
 						if let url = URL(string: urlString) {
-							WebImage(url: url)
-								.resizable()
-								.frame(width: 150, height: 150)
-								.aspectRatio(contentMode: .fit)
-								.accessibilityLabel("Sample image of \(dogBreed.name)")
-								.accessibilityRemoveTraits(.isImage)
-								.onTapGesture {
-									if listViewModel.chosenDogUrls.contains(urlString) {
-										if let index = listViewModel.chosenDogUrls.firstIndex(of: urlString) {
-											listViewModel.chosenDogUrls.remove(at: index)
-										}
-									} else {
-										listViewModel.chosenDogUrls.append(urlString)
-									}
-								}
+							NavigationLink(destination: DogDetailView(imageUrl: urlString)) {
+								WebImage(url: url)
+									.resizable()
+									.frame(width: 150, height: 150)
+									.aspectRatio(contentMode: .fit)
+									.accessibilityLabel("Sample image of \(dogBreed.name)")
+									.accessibilityRemoveTraits(.isImage)
+							}
 						}
 					}
 				}

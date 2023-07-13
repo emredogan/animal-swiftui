@@ -25,6 +25,7 @@
 		63133F7A2A54DC6B00D116E4 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 63133F792A54DC6B00D116E4 /* FirebaseAnalytics */; };
 		6346D8B52A5384DE00DFBBD5 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 6346D8B42A5384DE00DFBBD5 /* SDWebImageSwiftUI */; };
 		6346D8F52A54442E00DFBBD5 /* NotificationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6346D8F42A54442E00DFBBD5 /* NotificationsManager.swift */; };
+		6378CFD92A5FFBEF001D6712 /* DogDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6378CFD82A5FFBEF001D6712 /* DogDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		630A2E1D2A57800B00504E96 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6346D8F42A54442E00DFBBD5 /* NotificationsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsManager.swift; sourceTree = "<group>"; };
 		6346D8F62A54548E00DFBBD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		6378CFD82A5FFBEF001D6712 /* DogDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 				6305A89F2A5188F8006BCD1D /* DogView.swift */,
 				6305A8932A50BC40006BCD1D /* ArtworkView.swift */,
 				6305A8952A50BCE5006BCD1D /* ArtworkDetailView.swift */,
+				6378CFD82A5FFBEF001D6712 /* DogDetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 				6305A89E2A517B40006BCD1D /* DogListViewModel.swift in Sources */,
 				6305A8962A50BCE5006BCD1D /* ArtworkDetailView.swift in Sources */,
 				6305A8A02A5188F8006BCD1D /* DogView.swift in Sources */,
+				6378CFD92A5FFBEF001D6712 /* DogDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
