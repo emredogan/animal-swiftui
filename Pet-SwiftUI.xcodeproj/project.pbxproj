@@ -26,6 +26,8 @@
 		6346D8B52A5384DE00DFBBD5 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 6346D8B42A5384DE00DFBBD5 /* SDWebImageSwiftUI */; };
 		6346D8F52A54442E00DFBBD5 /* NotificationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6346D8F42A54442E00DFBBD5 /* NotificationsManager.swift */; };
 		6378CFD92A5FFBEF001D6712 /* DogDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6378CFD82A5FFBEF001D6712 /* DogDetailView.swift */; };
+		6378CFDB2A603BFA001D6712 /* ShimmerEffectBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6378CFDA2A603BFA001D6712 /* ShimmerEffectBox.swift */; };
+		6378CFDD2A604097001D6712 /* ContentLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6378CFDC2A604097001D6712 /* ContentLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		6346D8F42A54442E00DFBBD5 /* NotificationsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsManager.swift; sourceTree = "<group>"; };
 		6346D8F62A54548E00DFBBD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		6378CFD82A5FFBEF001D6712 /* DogDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogDetailView.swift; sourceTree = "<group>"; };
+		6378CFDA2A603BFA001D6712 /* ShimmerEffectBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerEffectBox.swift; sourceTree = "<group>"; };
+		6378CFDC2A604097001D6712 /* ContentLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +134,8 @@
 			isa = PBXGroup;
 			children = (
 				6305A8802A50B33E006BCD1D /* ContentView.swift */,
+				6378CFDA2A603BFA001D6712 /* ShimmerEffectBox.swift */,
+				6378CFDC2A604097001D6712 /* ContentLoader.swift */,
 				6305A89F2A5188F8006BCD1D /* DogView.swift */,
 				6305A8932A50BC40006BCD1D /* ArtworkView.swift */,
 				6305A8952A50BCE5006BCD1D /* ArtworkDetailView.swift */,
@@ -234,6 +240,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6305A8982A516AE2006BCD1D /* Unsplash.swift in Sources */,
+				6378CFDD2A604097001D6712 /* ContentLoader.swift in Sources */,
 				6305A8812A50B33E006BCD1D /* ContentView.swift in Sources */,
 				6346D8F52A54442E00DFBBD5 /* NotificationsManager.swift in Sources */,
 				6305A8942A50BC40006BCD1D /* ArtworkView.swift in Sources */,
@@ -241,6 +248,7 @@
 				6305A8902A50B402006BCD1D /* Artwork.swift in Sources */,
 				6305A89A2A516DF1006BCD1D /* UnsplashViewModel.swift in Sources */,
 				6305A89C2A5178D9006BCD1D /* Dog.swift in Sources */,
+				6378CFDB2A603BFA001D6712 /* ShimmerEffectBox.swift in Sources */,
 				6305A87F2A50B33E006BCD1D /* Pet_SwiftUIApp.swift in Sources */,
 				6305A89E2A517B40006BCD1D /* DogListViewModel.swift in Sources */,
 				6305A8962A50BCE5006BCD1D /* ArtworkDetailView.swift in Sources */,

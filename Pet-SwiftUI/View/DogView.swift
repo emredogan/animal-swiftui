@@ -11,6 +11,8 @@ import SDWebImageSwiftUI
 struct DogView: View {
 	@StateObject var viewModel: DogViewModel = DogViewModel()
 	@EnvironmentObject var listViewModel: DogListViewModel
+	@State private var showPlaceholder = true
+
 	var dogBreed: DogBreed
     var body: some View {
 		VStack {
@@ -20,14 +22,27 @@ struct DogView: View {
 					ForEach(viewModel.dogImagesUrls, id: \.self) {urlString in
 						if let url = URL(string: urlString) {
 							NavigationLink(destination: DogDetailView(imageUrl: urlString)) {
-								WebImage(url: url)
-									.resizable()
-									.frame(width: 150, height: 150)
-									.aspectRatio(contentMode: .fit)
-									.accessibilityLabel("Sample image of \(dogBreed.name)")
-									.accessibilityRemoveTraits(.isImage)
+								Group {
+									if showPlaceholder {
+										ContentLoader()
+											.frame(width: 150, height: 150)
+
+									} else {
+										WebImage(url: url)
+											.resizable()
+											.frame(width: 150, height: 150)
+											.aspectRatio(contentMode: .fit)
+											.accessibilityLabel("Sample image of \(dogBreed.name)")
+											.accessibilityRemoveTraits(.isImage)
+									}
+								}
 							}
 						}
+					}
+				}
+				.onAppear {
+					DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+						showPlaceholder = false
 					}
 				}
 			}
