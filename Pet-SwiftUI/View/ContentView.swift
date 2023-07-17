@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
 	@StateObject private var viewModel = DogListViewModel()
 	@StateObject private var notifManager = NotificationsManager()
+	@State private var showingCameraPicker = false
 	var body: some View {
 		NavigationStack {
 			VStack {
@@ -19,14 +20,26 @@ struct ContentView: View {
 						.frame(width: UIScreen.main.bounds.width, height: 200)
 				}
 			}
+			.sheet(isPresented: $showingCameraPicker, content: {
+				CameraImagePicker()
+			})
 			.toolbar {
-				Button("Request") {
-					Task {
-						await notifManager.request()
+				HStack {
+					Button("Request") {
+						Task {
+							showingCameraPicker = true
+							await notifManager.request()
+						}
+					}
+					.disabled(notifManager.hasPermission)
+					.accessibilityHidden(true)
+					Button("Camera") {
+						Task {
+							showingCameraPicker = true
+						}
 					}
 				}
-				.disabled(notifManager.hasPermission)
-				.accessibilityHidden(true)
+				
 			}
 			.task {
 				await notifManager.getAuthStatus()
