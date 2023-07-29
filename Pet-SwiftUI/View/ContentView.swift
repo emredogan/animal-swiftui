@@ -13,12 +13,13 @@ struct ContentView: View {
 	@State private var showingCameraPicker = false
 	@State private var showingSettings = false
 	var body: some View {
-		NavigationStack {
-			VStack {
-				Text("Number of dogs: \(viewModel.chosenDogUrls.count)")
-				List(viewModel.dogItems, id: \.self) { dogItem in
-					DogView(dogBreed: dogItem)
-						.frame(width: UIScreen.main.bounds.width, height: 200)
+		NavigationView {
+			ScrollView {
+				VStack {
+					ForEach(viewModel.dogItems, id: \.self) { dogItem in
+						DogView(dogBreed: dogItem)
+							.frame(width: UIScreen.main.bounds.width, height: 200)
+					}
 				}
 			}
 			.sheet(isPresented: $showingSettings) {
@@ -29,14 +30,15 @@ struct ContentView: View {
 			})
 			.toolbar {
 				HStack {
-					Button("Request") {
-						Task {
-							showingCameraPicker = true
-							await notifManager.request()
+					if !notifManager.hasPermission {
+						Button("Request") {
+							Task {
+								await notifManager.request()
+							}
 						}
+						.disabled(notifManager.hasPermission)
+						.accessibilityHidden(true)
 					}
-					.disabled(notifManager.hasPermission)
-					.accessibilityHidden(true)
 					Button("Camera") {
 						Task {
 							showingCameraPicker = true
@@ -48,7 +50,6 @@ struct ContentView: View {
 						}
 					}
 				}
-				
 			}
 			.task {
 				await notifManager.getAuthStatus()
