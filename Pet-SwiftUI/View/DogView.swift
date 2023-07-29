@@ -10,7 +10,6 @@ import SDWebImageSwiftUI
 
 struct DogView: View {
 	@StateObject var viewModel: DogViewModel = DogViewModel()
-	@EnvironmentObject var listViewModel: DogListViewModel
 	@State private var showPlaceholder = true
 
 	var dogBreed: DogBreed

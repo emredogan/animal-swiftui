@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  DogListView.swift
 //  Artwork-SwiftUI
 //
 //  Created by Emre Dogan on 01/07/2023.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct DogListView: View {
 	@StateObject private var viewModel = DogListViewModel()
 	@StateObject private var notifManager = NotificationsManager()
 	@State private var showingCameraPicker = false
@@ -40,14 +40,10 @@ struct ContentView: View {
 						.accessibilityHidden(true)
 					}
 					Button("Camera") {
-						Task {
-							showingCameraPicker = true
-						}
+						showingCameraPicker = true
 					}
 					Button("Settings") {
-						Task {
-							showingSettings = true
-						}
+						showingSettings = true
 					}
 				}
 			}
@@ -59,12 +55,11 @@ struct ContentView: View {
 			}
 			.navigationTitle("Number of dogs: \(viewModel.chosenDogUrls.count)")
 		}
-		.environmentObject(viewModel)
 	}
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct DogListView_Previews: PreviewProvider {
 	static var previews: some View {
-		ContentView()
+		DogListView()
 	}
 }

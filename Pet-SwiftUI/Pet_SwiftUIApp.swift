@@ -72,7 +72,7 @@ struct Pet_SwiftUIApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            DogListView()
 				.task {
 					appDelegate.app = self
 				}
