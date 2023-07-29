@@ -11,6 +11,7 @@ struct ContentView: View {
 	@StateObject private var viewModel = DogListViewModel()
 	@StateObject private var notifManager = NotificationsManager()
 	@State private var showingCameraPicker = false
+	@State private var showingSettings = false
 	var body: some View {
 		NavigationStack {
 			VStack {
@@ -19,6 +20,9 @@ struct ContentView: View {
 					DogView(dogBreed: dogItem)
 						.frame(width: UIScreen.main.bounds.width, height: 200)
 				}
+			}
+			.sheet(isPresented: $showingSettings) {
+				SettingsView()
 			}
 			.sheet(isPresented: $showingCameraPicker, content: {
 				CameraImagePicker()
@@ -36,6 +40,11 @@ struct ContentView: View {
 					Button("Camera") {
 						Task {
 							showingCameraPicker = true
+						}
+					}
+					Button("Settings") {
+						Task {
+							showingSettings = true
 						}
 					}
 				}
