@@ -9,7 +9,7 @@ import UIKit
 import SwiftUI
 import AVKit
 
-struct SettingsView: UIViewControllerRepresentable {
+struct WelcomeVideoView: UIViewControllerRepresentable {
 	func makeUIViewController(context: Context) -> SettingsViewController {
 		SettingsViewController()
 	}
@@ -20,12 +20,11 @@ struct SettingsView: UIViewControllerRepresentable {
 class SettingsViewController: UIViewController {
 	private let button: UIButton = {
 		let button = UIButton(type: .system)
-		button.setTitle("Hello, UIKit!", for: .normal)
+		button.setTitle("Watch Welcome Video 🐶", for: .normal)
 		button.titleLabel?.font = UIFont.systemFont(ofSize: 18)
 		button.backgroundColor = .blue
 		button.setTitleColor(.white, for: .normal)
 		button.layer.cornerRadius = 8
-		button.addTarget(self, action: #selector(didButtonClick), for: .touchUpInside)
 		return button
 	}()
 	
@@ -36,20 +35,22 @@ class SettingsViewController: UIViewController {
 		
 		view.addSubview(button)
 		button.translatesAutoresizingMaskIntoConstraints = false
+		button.addTarget(self, action: #selector(watchVideo), for: .touchUpInside)
 		
 		NSLayoutConstraint.activate([
 			button.centerXAnchor.constraint(equalTo: view.centerXAnchor),
 			button.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-			button.widthAnchor.constraint(equalToConstant: 200),
+			button.widthAnchor.constraint(equalToConstant: 300),
 			button.heightAnchor.constraint(equalToConstant: 50)
 		])
 	}
 	
-	@objc func didButtonClick(_ sender: UIButton) {
-		let videoPlayer = VideoPlayer(player: AVPlayer(url: URL(string: "https://www.pexels.com/video/10167684/download/")!))
-			.frame(height: 400)
-		let videoPlayerCompatible = UIHostingController(rootView: videoPlayer)
-		present(videoPlayerCompatible, animated: true)
+	@objc func watchVideo(_ sender: UIButton) {
+		if let videoURL = URL(string: "https://www.pexels.com/video/10167684/download/") {
+			let videoPlayer = VideoPlayer(player: AVPlayer(url: videoURL))
+				.frame(height: 400)
+			let videoPlayerCompatible = UIHostingController(rootView: videoPlayer)
+			present(videoPlayerCompatible, animated: true)
+		}
 	}
 }
-

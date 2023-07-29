@@ -71,7 +71,7 @@ class DogListViewModel: ObservableObject {
 	func fetchDogBreedsListWithAsyncAwait() async {
 		guard let url = URL(string: "https://dog.ceo/api/breeds/list/all") else { return }
 		do {
-			let (data, response) = try await URLSession.shared.data(from: url)
+			let (data, _) = try await URLSession.shared.data(from: url)
 			let result = try JSONDecoder().decode(DogAPIResult.self, from: data)
 			let dogBreeds = result.message.map { DogBreed(name: $0.key) }
 			let sortedDogBreeds = dogBreeds.sorted { $0.name < $1.name }

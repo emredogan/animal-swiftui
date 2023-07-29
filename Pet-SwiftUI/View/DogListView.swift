@@ -11,7 +11,7 @@ struct DogListView: View {
 	@StateObject private var viewModel = DogListViewModel()
 	@StateObject private var notifManager = NotificationsManager()
 	@State private var showingCameraPicker = false
-	@State private var showingSettings = false
+	@State private var welcomeVideo = false
 	var body: some View {
 		NavigationView {
 			ScrollView {
@@ -22,8 +22,8 @@ struct DogListView: View {
 					}
 				}
 			}
-			.sheet(isPresented: $showingSettings) {
-				SettingsView()
+			.sheet(isPresented: $welcomeVideo) {
+				WelcomeVideoView()
 			}
 			.sheet(isPresented: $showingCameraPicker, content: {
 				CameraImagePicker()
@@ -42,8 +42,8 @@ struct DogListView: View {
 					Button("Camera") {
 						showingCameraPicker = true
 					}
-					Button("Settings") {
-						showingSettings = true
+					Button("Welcome Video") {
+						welcomeVideo = true
 					}
 				}
 			}
