@@ -27,7 +27,7 @@ struct DogDetailView: View {
 				.aspectRatio(contentMode: .fit)
 				.navigationBarTitleDisplayMode(.inline)
 				.padding(20)
-			Text("Add to Cart 🛍️")
+			Text("Add to Favorites ❤️")
 				.onTapGesture {
 					if listViewModel.chosenDogUrls.contains(imageUrl) {
 						if let index = listViewModel.chosenDogUrls.firstIndex(of: imageUrl) {
