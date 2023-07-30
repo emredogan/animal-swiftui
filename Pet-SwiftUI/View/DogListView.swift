@@ -42,7 +42,7 @@ struct DogListView: View {
 					Button("Camera") {
 						showingCameraPicker = true
 					}
-					Button("Welcome Video") {
+					Button("Welcome") {
 						welcomeVideo = true
 					}
 				}
