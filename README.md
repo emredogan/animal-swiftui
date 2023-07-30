@@ -1,6 +1,8 @@
 # animal-swiftui
 
 This project demonstrates a basic SwiftUI app where we make some API requests and the user can scroll vertically or horizontally on the available content. <br />
+<img src="main-page.jpeg" alt="Screenshot" width="250">
+
 # Software Design Pattern: 
 The project is using MVVM structure to separate the state and logic out of our view structs. <br />
 
