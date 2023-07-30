@@ -29,8 +29,11 @@ Similarly, CameraImagePicker which has UIImagePickerController  is used in our S
 # SwiftUI Animations
 Creating animations in SwiftUI is straight forward and loading animation is a common usage that is used in popular apps such as Facebook, Twitter while loading the content. I set up a similar gradient animation as a placeholder while loading the images.
 
+<img src="load-animation.gif" alt="Screenshot" width="250">
+
+
 ## Animations with Motion Manager
-iPhone devices are able to detect certain motions in the device using the accelerometer and the the gyroscope hardware. I have made use of this feature and implemented a 3D rotation of images effect using the values from the different axes. <br />
+iPhone devices are able to detect certain motions in the device using the accelerometer and the gyroscope hardware. I have made use of this feature and implemented a 3D rotation of images effect using the values from the different axes. <br />
 
 # Accessibility Feature
 In this project, I had a chance to experiment with the following features:
