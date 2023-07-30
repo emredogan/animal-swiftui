@@ -10,14 +10,14 @@ import SwiftUI
 import AVKit
 
 struct WelcomeVideoView: UIViewControllerRepresentable {
-	func makeUIViewController(context: Context) -> SettingsViewController {
-		SettingsViewController()
+	func makeUIViewController(context: Context) -> WelcomeViewController {
+		WelcomeViewController()
 	}
 
-	func updateUIViewController(_ uiViewController: SettingsViewController, context: Context) {}
+	func updateUIViewController(_ uiViewController: WelcomeViewController, context: Context) {}
 }
 
-class SettingsViewController: UIViewController {
+class WelcomeViewController: UIViewController {
 	private let button: UIButton = {
 		let button = UIButton(type: .system)
 		button.setTitle("Watch Welcome Video 🐶", for: .normal)

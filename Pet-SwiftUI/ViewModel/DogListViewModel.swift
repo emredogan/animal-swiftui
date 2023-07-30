@@ -81,6 +81,5 @@ class DogListViewModel: ObservableObject {
 		} catch {
 			debugPrint("Error: \(error)")
 		}
-		
 	}
 }
