@@ -35,6 +35,9 @@ Creating animations in SwiftUI is straight forward and loading animation is a co
 ## Animations with Motion Manager
 iPhone devices are able to detect certain motions in the device using the accelerometer and the gyroscope hardware. I have made use of this feature and implemented a 3D rotation of images effect using the values from the different axes. <br />
 
+<img src="dog.gif" alt="Screenshot" width="250">
+
+
 # Accessibility Feature
 In this project, I had a chance to experiment with the following features:
 **accessibilityLabel**: Create a custom label to announce  <br />
